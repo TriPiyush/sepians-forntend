@@ -1,5 +1,5 @@
 // import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import {  useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { AccountProfile } from '../components/AccountProfile';
@@ -8,19 +8,17 @@ import { Navbar } from '../components/Navbar';
 import { getcolor } from '../redux/actions/userData'
 const Account = () => {
   const dispatch = useDispatch();
-  const { isLoggedIn, user } = useSelector(state => state.auth);
-  const {label,color} = useSelector(state => state.userData);
-  console.log(user, color)
+  const {  user } = useSelector(state => state.auth);
+  const {color} = useSelector(state => state.userData);
+  
   useEffect(() => {
     dispatch(getcolor())
       .then(() => {
-        // navigate("/profile");
        
-
       })
       .catch((e) => {
         console.log("Error", e)
-        // setLoading(false);
+     
       });
   }, [])
 

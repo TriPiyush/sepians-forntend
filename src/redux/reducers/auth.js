@@ -1,6 +1,4 @@
 import {
-    COLOR_SUCCESS,
-    COLOR_FAIL,
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
